@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreshCart Grocery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <nav class="topbar">
+        <div>
+          <p class="eyebrow">FreshCart Grocery</p>
+          <h1>Order daily essentials in minutes.</h1>
+        </div>
+        <button class="status-pill" type="button">
+          <span class="status-dot"></span>
+          Same-day delivery
+        </button>
+      </nav>
+
+      <section class="hero-content">
+        <div class="hero-copy">
+          <p class="hero-kicker">Simple Web Tech Project</p>
+          <p class="hero-text">
+            A lightweight online grocery ordering website built with HTML, CSS, and JavaScript.
+            The UI stays simple while the JavaScript keeps state centralized for products, filters,
+            and cart actions.
+          </p>
+
+          <div class="hero-metrics">
+            <article>
+              <strong id="product-count">0</strong>
+              <span>Fresh items</span>
+            </article>
+            <article>
+              <strong id="category-count">0</strong>
+              <span>Categories</span>
+            </article>
+            <article>
+              <strong id="cart-count">0</strong>
+              <span>In cart</span>
+            </article>
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <p>State Management Focus</p>
+          <ul>
+            <li>Single store object</li>
+            <li>Predictable updates</li>
+            <li>Automatic UI re-render</li>
+          </ul>
+        </aside>
+      </section>
+    </header>
+
+    <main class="dashboard">
+      <section class="catalog-panel">
+        <div class="panel-header">
+          <div>
+            <p class="section-label">Browse Products</p>
+            <h2>Online Grocery Catalog</h2>
+          </div>
+          <label class="search-field" for="search-input">
+            <span>Search</span>
+            <input id="search-input" type="search" placeholder="Search fruits, dairy, snacks..." />
+          </label>
+        </div>
+
+        <div class="filters" id="category-filters" aria-label="Product categories"></div>
+
+        <div class="product-grid" id="product-grid"></div>
+      </section>
+
+      <aside class="cart-panel">
+        <div class="panel-header cart-header">
+          <div>
+            <p class="section-label">Your Basket</p>
+            <h2>Cart Summary</h2>
+          </div>
+          <button id="clear-cart-btn" class="ghost-btn" type="button">Clear cart</button>
+        </div>
+
+        <div id="cart-items" class="cart-items"></div>
+
+        <div class="summary-card">
+          <div class="summary-row">
+            <span>Items</span>
+            <strong id="summary-items">0</strong>
+          </div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="summary-subtotal">₹0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Delivery</span>
+            <strong id="summary-delivery">₹49.00</strong>
+          </div>
+          <div class="summary-row total">
+            <span>Total</span>
+            <strong id="summary-total">₹0.00</strong>
+          </div>
+          <button class="checkout-btn" type="button">Place Order</button>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
